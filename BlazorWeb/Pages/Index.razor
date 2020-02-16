@@ -1,0 +1,31 @@
+﻿@page "/"
+@using ApiClient.Gateways
+@using Core.Models
+
+<h1>All words:</h1>
+
+@if (TryGetWords(out var words))
+{
+    foreach (var wordModel in words)
+    {
+        <div>@wordModel.Original - @wordModel.Translate</div>
+    }
+}
+else
+{
+    <div>ERROR</div>
+    <div>Error for get words</div>
+}
+
+
+@code {
+
+    private bool TryGetWords(out IList<WordModel> words)
+    {
+        var requestResult = Task.Run(() => new WordApiGateway().GetAllWords()).Result;
+
+        words = requestResult.Content;
+        return requestResult.IsSuccess;
+    }
+
+}

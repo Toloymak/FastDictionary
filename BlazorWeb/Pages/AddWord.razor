@@ -1,0 +1,29 @@
+@page "/AddWord"
+
+<form>
+    <div>
+        <label>New word</label>
+        <input type="text" @oninput="@UpdateOptions"/>
+    </div>
+    <div>
+        <label>Tranlate</label>
+        <input />
+    </div>
+    <div>
+        <label>
+            options from google transate
+        </label>
+        <input value=@options.ToString()/>
+    </div>
+</form>
+
+@code
+{
+    int options; 
+
+    
+    void UpdateOptions()
+    {
+        options++;
+    }
+}
