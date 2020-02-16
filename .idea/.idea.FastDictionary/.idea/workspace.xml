@@ -1,61 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecd78c69-37b9-4ea0-85fc-b01b1cd3c5db" name="Default Changelist" comment="">
+    <list default="true" id="ecd78c69-37b9-4ea0-85fc-b01b1cd3c5db" name="Default Changelist" comment="Add datebase and simple implementation for translate in blazor">
       <changelist_data />
-      <change afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Controllers/BaseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Controllers/WordsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiClient/Models/ApiResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/WordModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestConsole/TestConsole.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestConsole/Tests/MsTranslator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiClient/Gateways/BaseGateway.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Enums/LanguageEnum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Extensions/LanguageEnumExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/FdContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/FdContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Models/Entity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Models/TranslateWord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/blogging.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/Alignment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/DetectedLanguage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/LanguageSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/SentenceLength.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/TextResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/Translation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/TranslationResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FastDictionary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FastDictionary.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/Counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/FetchData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/NavMenu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/components/NavMenu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/registerServiceWorker.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/store/Counter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/store/WeatherForecasts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/store/configureStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/src/store/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ClientApp/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Pages/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Pages/Error.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Pages/_ViewImports.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Startup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Web.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +50,43 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Api/Controllers/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FBA61E84-2948-4999-A16C-C36B262A4D33/77/8b44821c/RestRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestConsole/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/BaseGateway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Extensions/LanguageEnumExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Enums/LanguageEnum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="dummy://restClient/response1.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/TranslationResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/DetectedLanguage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/TextResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/Translation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/SentenceLength.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/Alignment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/LanguageSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/FdContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Controllers/TranslateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestConsole/Tests/MsTranslator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Models/TranslateWord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/FdContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CDAE4105-7E89-4723-8979-C3C1D3936A03/160/Future.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Models/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Api/Controllers/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApiClient/InternalApiClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CDAE4105-7E89-4723-8979-C3C1D3936A03/cf/eda46814/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/App.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="dummy://restClient/response1.txt" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/Pages/Index.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/Pages/Error.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -91,19 +98,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6AD97EDC-65FD-4917-AF0A-C961F1FCEDA0/3E/RendererSynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6AD97EDC-65FD-4917-AF0A-C961F1FCEDA0/3F/RendererSynchronizationContextDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/135E6474-795E-4AE6-9671-E433C54F651C/6B/StaticComponentRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestConsole/Tests/MsTranslator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Models/WordModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Controllers/WordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD79A932-E2B1-4A18-83D2-FB65B2C3DA4D/30/f63c0c34/TagHelperRunner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CDAE4105-7E89-4723-8979-C3C1D3936A03/160/Future.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApiClient/Models/ApiResponse.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -120,7 +118,6 @@
         <option value="$PROJECT_DIR$/Models/Class1.cs" />
         <option value="$PROJECT_DIR$/Core/Class1.cs" />
         <option value="$PROJECT_DIR$/Core/Models/WordModel.cs" />
-        <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Api/Startup.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/BaseController.cs" />
         <option value="$PROJECT_DIR$/Api/Controllers/WordsController.cs" />
@@ -131,17 +128,34 @@
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/AddPage.cshtml.cs" />
         <option value="$PROJECT_DIR$/BlazorWeb/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/_Host.cshtml" />
-        <option value="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" />
-        <option value="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" />
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/Index.razor" />
         <option value="$PROJECT_DIR$/Integrations/Class1.cs" />
-        <option value="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" />
         <option value="$PROJECT_DIR$/Integrations/Clients/GoogleTranslateClient.cs" />
         <option value="$PROJECT_DIR$/Integrations/Clients/AzureTranslateClient.cs" />
         <option value="$PROJECT_DIR$/Console/Program.cs" />
         <option value="$PROJECT_DIR$/TestConsole/Tests/MsTranslator.cs" />
         <option value="$PROJECT_DIR$/TestConsole/Program.cs" />
+        <option value="$PROJECT_DIR$/Core/Enums/Languages.cs" />
+        <option value="$PROJECT_DIR$/Core/Enums/LanguageEnum.cs" />
+        <option value="$PROJECT_DIR$/Core/Extensions/LanguageEnumExtentions.cs" />
+        <option value="$PROJECT_DIR$/ApiClient/Gateways/BaseGateway.cs" />
+        <option value="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" />
+        <option value="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" />
+        <option value="$PROJECT_DIR$/Core/Extensions/LanguageEnumExtensions.cs" />
+        <option value="$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" />
         <option value="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" />
+        <option value="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" />
+        <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Class1.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/FDContext.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/Entity.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/WordTranslate.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/Word.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/TranslateWord.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/FdContext.cs" />
       </list>
     </option>
   </component>
@@ -226,7 +240,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Console">
+  <component name="RunManager" selected=".NET Project.BlazorWeb">
+    <configuration name="BlazorWeb" type="CompoundRunConfigurationType">
+      <toRun name="BlazorWeb" type="DotNetProject" />
+      <toRun name="Api" type="LaunchSettings" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="BlazorWeb" type="DotNetProject" />
+      <toRun name="Api" type="LaunchSettings" />
+      <method v="2" />
+    </configuration>
     <configuration name="BlazorWeb" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/BlazorWeb/bin/Debug/netcoreapp3.1/BlazorWeb.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -241,14 +265,15 @@
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
       <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <browser start="true" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
     </configuration>
     <configuration name="Console" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Console/bin/Debug/netcoreapp3.1/Console.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/TestConsole/bin/Debug/netcoreapp3.1/TestConsole.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Console/bin/Debug/netcoreapp3.1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestConsole/bin/Debug/netcoreapp3.1" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -281,7 +306,7 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+    <configuration name="Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Api/Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="Api" />
@@ -315,11 +340,11 @@
       <item itemvalue=".NET Launch Settings Profile.Api" />
       <item itemvalue=".NET Project.BlazorWeb" />
       <item itemvalue=".NET Project.Console" />
+      <item itemvalue="Compound.BlazorWeb" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.Console" />
-        <item itemvalue=".NET Launch Settings Profile.Api" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +373,7 @@
       <workItem from="1581243729140" duration="1184000" />
       <workItem from="1581245514566" duration="17396000" />
       <workItem from="1581848902682" duration="2295000" />
-      <workItem from="1581852575785" duration="5897000" />
+      <workItem from="1581852575785" duration="14578000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1581246505521</created>
@@ -357,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581246505521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create simple project on Blazor, drop old code, Create clint for azure translator">
+      <created>1581859328974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581859328974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +412,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create project" />
+    <MESSAGE value="Create simple project on Blazor, drop old code, Create clint for azure translator" />
+    <MESSAGE value="Add datebase and simple implementation for translate in blazor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add datebase and simple implementation for translate in blazor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="575" y="139" width="827" height="826" key="#Api:_IIS_Express" timestamp="1581249494732">
@@ -395,106 +429,114 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="575" y="139" width="827" height="826" key="#BlazorWeb:_IIS_Express_(1)/67.27.1853.1053@67.27.1853.1053" timestamp="1581248495081" />
+    <state x="588" y="204" width="1059" height="647" key="#Context_Actions" timestamp="1581867495374">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="204" width="1059" height="647" key="#Context_Actions/67.27.1853.1053@67.27.1853.1053" timestamp="1581867495374" />
     <state x="664" y="267" width="649" height="570" key="#Web" timestamp="1581248436851">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="664" y="267" width="649" height="570" key="#Web/67.27.1853.1053@67.27.1853.1053" timestamp="1581248436851" />
-    <state x="451" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581249553044">
+    <state x="451" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581863755516">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581249553044" />
-    <state width="528" height="466" key="DebuggerActiveHint" timestamp="1581857816318">
+    <state x="451" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581863755516" />
+    <state x="617" y="357" width="743" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581868333742">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="528" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1581857816318" />
+    <state x="617" y="357" width="743" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1581868333742" />
+    <state width="1265" height="466" key="DebuggerActiveHint" timestamp="1581864374288">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1265" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1581864374288" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581244735245">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1581244735245" />
-    <state width="1807" height="330" key="GridCell.Tab.0.bottom" timestamp="1581858119978">
+    <state width="1807" height="330" key="GridCell.Tab.0.bottom" timestamp="1581868641511">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581858119978" />
-    <state width="1807" height="330" key="GridCell.Tab.0.center" timestamp="1581858119978">
+    <state width="1807" height="330" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641511" />
+    <state width="1807" height="330" key="GridCell.Tab.0.center" timestamp="1581868641508">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581858119978" />
-    <state width="1807" height="330" key="GridCell.Tab.0.left" timestamp="1581858119977">
+    <state width="1807" height="330" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641508" />
+    <state width="1807" height="330" key="GridCell.Tab.0.left" timestamp="1581868641507">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581858119977" />
-    <state width="1807" height="330" key="GridCell.Tab.0.right" timestamp="1581858119978">
+    <state width="1807" height="330" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641507" />
+    <state width="1807" height="330" key="GridCell.Tab.0.right" timestamp="1581868641510">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581858119978" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1581858087911">
+    <state width="1807" height="330" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641510" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1581866669273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087911" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1581858087911">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669273" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1581866669271">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087911" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1581858087911">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669271" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1581866669271">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087911" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1581858087911">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669271" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1581866669272">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087911" />
-    <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1581858087912">
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669272" />
+    <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1581866669276">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087912" />
-    <state width="1807" height="344" key="GridCell.Tab.2.center" timestamp="1581858087912">
+    <state width="1807" height="344" key="GridCell.Tab.2.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669276" />
+    <state width="1807" height="344" key="GridCell.Tab.2.center" timestamp="1581866669274">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087912" />
-    <state width="1807" height="344" key="GridCell.Tab.2.left" timestamp="1581858087911">
+    <state width="1807" height="344" key="GridCell.Tab.2.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669274" />
+    <state width="1807" height="344" key="GridCell.Tab.2.left" timestamp="1581866669273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087911" />
-    <state width="1807" height="344" key="GridCell.Tab.2.right" timestamp="1581858087912">
+    <state width="1807" height="344" key="GridCell.Tab.2.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669273" />
+    <state width="1807" height="344" key="GridCell.Tab.2.right" timestamp="1581866669275">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087912" />
-    <state width="1807" height="344" key="GridCell.Tab.3.bottom" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669275" />
+    <state width="1807" height="344" key="GridCell.Tab.3.bottom" timestamp="1581866669278">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.3.center" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.3.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669278" />
+    <state width="1807" height="344" key="GridCell.Tab.3.center" timestamp="1581866669277">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.3.left" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.3.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669277" />
+    <state width="1807" height="344" key="GridCell.Tab.3.left" timestamp="1581866669276">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.3.right" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.3.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669276" />
+    <state width="1807" height="344" key="GridCell.Tab.3.right" timestamp="1581866669277">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.4.bottom" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.3.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669277" />
+    <state width="1807" height="344" key="GridCell.Tab.4.bottom" timestamp="1581866669280">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.4.center" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.4.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669280" />
+    <state width="1807" height="344" key="GridCell.Tab.4.center" timestamp="1581866669279">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.4.left" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.4.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669279" />
+    <state width="1807" height="344" key="GridCell.Tab.4.left" timestamp="1581866669278">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state width="1807" height="344" key="GridCell.Tab.4.right" timestamp="1581858087913">
+    <state width="1807" height="344" key="GridCell.Tab.4.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669278" />
+    <state width="1807" height="344" key="GridCell.Tab.4.right" timestamp="1581866669279">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581858087913" />
-    <state x="588" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size" timestamp="1581852540506">
+    <state width="1807" height="344" key="GridCell.Tab.4.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669279" />
+    <state x="588" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size" timestamp="1581868579424">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size/67.27.1853.1053@67.27.1853.1053" timestamp="1581852540506" />
+    <state x="588" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size/67.27.1853.1053@67.27.1853.1053" timestamp="1581868579424" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1581244897619">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -503,26 +545,66 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="67" y="357" width="1511" height="723" maximized="true" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1581247321789" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1581248372497">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1581868460969">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1581248372497" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1581868460969" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" initialLine="29">
+          <url>file://$PROJECT_DIR$/BlazorWeb/Pages/Index.razor</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/BlazorWeb/Pages/Index.razor" initialLine="23" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
-              <option value="785" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="803" />
+              <option value="-1" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Api/Controllers/TranslateController.cs</url>
+          <line>14</line>
+          <properties documentPath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" initialLine="14">
+            <startOffsets>
+              <option value="377" />
+            </startOffsets>
+            <endOffsets>
+              <option value="378" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs</url>
+          <line>38</line>
+          <properties documentPath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" initialLine="38">
+            <startOffsets>
+              <option value="1139" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1223" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" initialLine="12">
+            <startOffsets>
+              <option value="322" />
+            </startOffsets>
+            <endOffsets>
+              <option value="643" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

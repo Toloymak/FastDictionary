@@ -8,6 +8,7 @@
         <e p="Api.csproj" t="IncludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="BaseController.cs" t="Include" />
+          <e p="TranslateController.cs" t="Include" />
           <e p="WordsController.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -29,6 +30,8 @@
       <e p="ApiClient" t="IncludeRecursive">
         <e p="ApiClient.csproj" t="IncludeRecursive" />
         <e p="Gateways" t="Include">
+          <e p="BaseGateway.cs" t="Include" />
+          <e p="TranslateGateway.cs" t="Include" />
           <e p="WordApiGateway.cs" t="Include" />
         </e>
         <e p="InternalApiClient.cs" t="Include" />
@@ -66,7 +69,6 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="mono_crash.mem.13323.1.blob" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -105,6 +107,12 @@
       </e>
       <e p="Core" t="IncludeRecursive">
         <e p="Core.csproj" t="IncludeRecursive" />
+        <e p="Enums" t="Include">
+          <e p="LanguageEnum.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="LanguageEnumExtensions.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="WordModel.cs" t="Include" />
         </e>
@@ -117,12 +125,46 @@
           </e>
         </e>
       </e>
+      <e p="DataLayer" t="IncludeRecursive">
+        <e p="DataLayer.csproj" t="IncludeRecursive" />
+        <e p="FdContext.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20200216161339_InitialCreate.Designer.cs" t="Include" />
+          <e p="20200216161339_InitialCreate.cs" t="Include" />
+          <e p="FdContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Entity.cs" t="Include" />
+          <e p="OriginalWord.cs" t="Include" />
+          <e p="TranslateWord.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="blogging.db" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="DataLayer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="FastDictionary.sln" t="IncludeFlat" />
       <e p="Integrations" t="IncludeRecursive">
         <e p="Clients" t="Include">
           <e p="MicrosoftTranslateClient.cs" t="Include" />
         </e>
         <e p="Integrations.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Translator" t="Include">
+            <e p="Alignment.cs" t="Include" />
+            <e p="DetectedLanguage.cs" t="Include" />
+            <e p="LanguageSettings.cs" t="Include" />
+            <e p="SentenceLength.cs" t="Include" />
+            <e p="TextResult.cs" t="Include" />
+            <e p="Translation.cs" t="Include" />
+            <e p="TranslationResult.cs" t="Include" />
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

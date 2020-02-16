@@ -1,29 +1,61 @@
 @page "/AddWord"
+@using ApiClient.Gateways
 
 <form>
     <div>
         <label>New word</label>
-        <input type="text" @oninput="@UpdateOptions"/>
+        <input type="source" @bind="@Source"/>
     </div>
     <div>
-        <label>Tranlate</label>
-        <input />
+        <label>Your custom translate</label>
+        <input @bind="@CustomTranslate"/>
     </div>
     <div>
-        <label>
-            options from google transate
-        </label>
-        <input value=@options.ToString()/>
+        <label>Tranlate from server</label>
+        <input type="text" value=@Translate/>
     </div>
+
+    <label @onclick="@SaveTranslate">Save</label>
 </form>
+<label>@Result</label>
 
 @code
 {
-    int options; 
-
-    
-    void UpdateOptions()
+    private string _source = String.Empty;
+    public string Source
     {
-        options++;
+        get { return _source; }
+        set
+        {
+            _source = value;
+            UpdateTranslate();
+        }
+    }
+    
+    public string Translate { get; set; }
+    public string CustomTranslate { get; set; }
+    public string Result { get; set; }
+    
+    public void UpdateTranslate()
+    {
+        if (Source.Length < 4)
+            return;
+
+        var translateResponse = Task.Run(() => new TranslateGateway().Translate(Source)).Result;
+
+        if (translateResponse.IsSuccess)
+            Translate = translateResponse.Content.Translate;
+        else
+            // todo: make correct error message
+            Console.WriteLine("Error: " + translateResponse.Exception);
+    }
+
+    public void SaveTranslate()
+    {
+        var original = Source;
+        var translate = CustomTranslate ?? Translate;
+        
+        Console.WriteLine($"{original} : {translate}");
+        Result = "Ok";
     }
 }

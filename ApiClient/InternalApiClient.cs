@@ -27,9 +27,15 @@ namespace ApiClient
             Client.RemoteCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
         }
 
-        public async Task<ApiResponse<T>> ExecuteGet<T>(string url)
+        public async Task<ApiResponse<T>> ExecuteGet<T>(string url, Dictionary<string, string> parameters = null)
         {
             var restRequest = new RestRequest(url, Method.GET);
+
+            if (parameters != null)
+                foreach (var parameter in parameters)
+                    restRequest.Parameters.Add(new Parameter(parameter.Key, parameter.Value,
+                        ParameterType.QueryString));
+
             var response = await Client.ExecuteAsync(restRequest);
 
             try

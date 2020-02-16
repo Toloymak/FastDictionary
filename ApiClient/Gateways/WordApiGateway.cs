@@ -5,15 +5,8 @@ using Core.Models;
 
 namespace ApiClient.Gateways
 {
-    public class WordApiGateway
+    public class WordApiGateway : BaseGateway
     {
-        private readonly InternalApiClient _internalApiClient;
-        
-        public WordApiGateway()
-        {
-            _internalApiClient = new InternalApiClient();
-        }
-
         public async Task<ApiResponse<IList<WordModel>>> GetAllWords() 
             => await _internalApiClient.ExecuteGet<IList<WordModel>>("words");
     }

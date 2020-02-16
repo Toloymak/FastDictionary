@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Integrations.Models.Translator;
 using Newtonsoft.Json;
 
 namespace Integrations.Clients
@@ -57,63 +58,5 @@ namespace Integrations.Clients
 
         private const string endpoint_var = "TRANSLATOR_TEXT_ENDPOINT";
         private static readonly string endpoint = "https://api-nam.cognitive.microsofttranslator.com"; 
-        //"https://translate-service.cognitiveservices.azure.com/sts/v1.0/issuetoken";
-    }
-    
-    public class TranslationResult
-    {
-        public DetectedLanguage DetectedLanguage { get; set; }
-        public TextResult SourceText { get; set; }
-        public Translation[] Translations { get; set; }
-
-        public string[] GetAllTranslations =>
-            Translations.Select(t => t.Text).ToArray();
-    }
-
-    public class DetectedLanguage
-    {
-        public string Language { get; set; }
-        public float Score { get; set; }
-    }
-
-    public class TextResult
-    {
-        public string Text { get; set; }
-        public string Script { get; set; }
-    }
-
-    public class Translation
-    {
-        public string Text { get; set; }
-        public TextResult Transliteration { get; set; }
-        public string To { get; set; }
-        public Alignment Alignment { get; set; }
-        public SentenceLength SentLen { get; set; }
-    }
-
-    public class Alignment
-    {
-        public string Proj { get; set; }
-    }
-
-    public class SentenceLength
-    {
-        public int[] SrcSentLen { get; set; }
-        public int[] TransSentLen { get; set; }
-    }
-
-    public class LanguageSettings
-    {
-        public string From { get; set; }
-        public string To {get; set; }
-
-        public LanguageSettings(string from, string to)
-        {
-            From = from;
-            To = to;
-        }
-
-        public string GetTranslateString =>
-            $"from={From}&to={To}";
     }
 }
