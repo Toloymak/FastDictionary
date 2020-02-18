@@ -113,8 +113,15 @@
         <e p="Extensions" t="Include">
           <e p="LanguageEnumExtensions.cs" t="Include" />
         </e>
+        <e p="Mappers" t="Include">
+          <e p="OriginalWordMappers.cs" t="Include" />
+          <e p="WordModelMappers.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="WordModel.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="WordService.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -128,6 +135,18 @@
       <e p="DataLayer" t="IncludeRecursive">
         <e p="DataLayer.csproj" t="IncludeRecursive" />
         <e p="FdContext.cs" t="Include" />
+        <e p="Logic" t="Include">
+          <e p="BaseReader.cs" t="Include" />
+          <e p="BaseWriter.cs" t="Include" />
+          <e p="OriginalWords" t="Include">
+            <e p="OriginalWordReader.cs" t="Include" />
+            <e p="OriginalWordWriter.cs" t="Include" />
+          </e>
+          <e p="TranslateWords" t="Include">
+            <e p="TranslateWordReader.cs" t="Include" />
+            <e p="TranslateWordWriter.cs" t="Include" />
+          </e>
+        </e>
         <e p="Migrations" t="Include">
           <e p="20200216161339_InitialCreate.Designer.cs" t="Include" />
           <e p="20200216161339_InitialCreate.cs" t="Include" />

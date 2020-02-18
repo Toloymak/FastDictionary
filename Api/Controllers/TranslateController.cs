@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Core.Enums;
 using Core.Extensions;
 using Core.Models;
+using Core.Services;
+using DataLayer.Logic.TranslateWords;
 using Integrations.Clients;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +12,13 @@ namespace Api.Controllers
 {
     public class TranslateController: BaseController
     {
+        private readonly WordService _wordService;
+
+        public TranslateController(WordService wordService)
+        {
+            _wordService = wordService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> Get(string text, LanguageEnum from, LanguageEnum to)
         {
@@ -23,11 +32,7 @@ namespace Api.Controllers
 
             return Ok(model);
         }
-
-        /// <summary>
-        /// Save translate
-        /// </summary>
-        /// <returns></returns>
+        
         [HttpPost]
         public async Task<IActionResult> Post(string source, string translate)
         {

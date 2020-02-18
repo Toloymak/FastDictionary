@@ -2,36 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecd78c69-37b9-4ea0-85fc-b01b1cd3c5db" name="Default Changelist" comment="Add datebase and simple implementation for translate in blazor">
-      <changelist_data />
-      <change afterPath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiClient/Gateways/BaseGateway.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Enums/LanguageEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Extensions/LanguageEnumExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/FdContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/FdContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Models/Entity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/Models/TranslateWord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/blogging.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/Alignment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/DetectedLanguage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/LanguageSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/SentenceLength.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/TextResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/Translation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Integrations/Models/Translator/TranslationResult.cs" afterDir="false" />
+      <changelist_data name="" email="" />
+      <change afterPath="$PROJECT_DIR$/Core/Mappers/OriginalWordMappers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Mappers/WordModelMappers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Services/WordService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/BaseReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/BaseWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordWriter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastDictionary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiClient/InternalApiClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastDictionary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FastDictionary.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/WordModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/WordModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,25 +38,35 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FBA61E84-2948-4999-A16C-C36B262A4D33/77/8b44821c/RestRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/TranslateGateway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestConsole/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/BaseGateway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Mappers/WordModelMappers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Extensions/LanguageEnumExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Mappers/OriginalWordMappers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Enums/LanguageEnum.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="dummy://restClient/response1.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Core/Services/WordService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/TranslationResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/DetectedLanguage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/TextResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/Translation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/SentenceLength.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/Alignment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Integrations/Models/Translator/LanguageSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/FdContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Controllers/TranslateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C83C0E82-2F21-48FC-A29F-AB1AE23A0655/1F4/EntityEntry`.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C83C0E82-2F21-48FC-A29F-AB1AE23A0655/12/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C83C0E82-2F21-48FC-A29F-AB1AE23A0655/A/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/BaseWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestConsole/Tests/MsTranslator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/BaseReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ApiClient/Gateways/WordApiGateway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -107,24 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/Models/World.cs" />
-        <option value="$PROJECT_DIR$/Web/Models/WorldModel.cs" />
-        <option value="$PROJECT_DIR$/Web/Controllers/WorldsController.cs" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Web/Models/WordModel.cs" />
-        <option value="$PROJECT_DIR$/Web/Controllers/WordsController.cs" />
-        <option value="$PROJECT_DIR$/Web/ClientApp/src/store/models/WordModel.tsx" />
-        <option value="$PROJECT_DIR$/Web/ClientApp/src/components/Home.tsx" />
-        <option value="$PROJECT_DIR$/Models/Class1.cs" />
-        <option value="$PROJECT_DIR$/Core/Class1.cs" />
-        <option value="$PROJECT_DIR$/Core/Models/WordModel.cs" />
-        <option value="$PROJECT_DIR$/Api/Startup.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/BaseController.cs" />
-        <option value="$PROJECT_DIR$/Api/Controllers/WordsController.cs" />
-        <option value="$PROJECT_DIR$/ApiClient/Class1.cs" />
-        <option value="$PROJECT_DIR$/ApiClient/Models/ApiResponseModel.cs" />
-        <option value="$PROJECT_DIR$/ApiClient/Models/ApiResponse.cs" />
-        <option value="$PROJECT_DIR$/BlazorWeb/Startup.cs" />
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/AddPage.cshtml.cs" />
         <option value="$PROJECT_DIR$/BlazorWeb/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/_Host.cshtml" />
@@ -146,16 +125,36 @@
         <option value="$PROJECT_DIR$/Integrations/Clients/MicrosoftTranslateClient.cs" />
         <option value="$PROJECT_DIR$/BlazorWeb/Pages/AddWord.razor" />
         <option value="$PROJECT_DIR$/Api/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" />
         <option value="$PROJECT_DIR$/DataLayer/Class1.cs" />
         <option value="$PROJECT_DIR$/DataLayer/FDContext.cs" />
-        <option value="$PROJECT_DIR$/DataLayer/Models/Entity.cs" />
         <option value="$PROJECT_DIR$/DataLayer/Models/WordTranslate.cs" />
         <option value="$PROJECT_DIR$/DataLayer/Models/Word.cs" />
         <option value="$PROJECT_DIR$/DataLayer/Models/TranslateWord.cs" />
-        <option value="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" />
         <option value="$PROJECT_DIR$/DataLayer/Migrations/20200216161339_InitialCreate.cs" />
         <option value="$PROJECT_DIR$/DataLayer/FdContext.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/OriginalWord.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/OriginalWord/OriginalWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Models/Entity.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/OriginalWord/OriginalWordWriter.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranlateWord/TranlateWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranlateWord/TranlateWordWriter.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranlateWord/TranslateWordWriter.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranlateWord/TranslateWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranlateWords/TranslateWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Sevises/WordService.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Services/WordService.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/OriginalWords/OriginalWordWriter.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordWriter.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/TranslateWords/TranslateWordReader.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/BaseReader.cs" />
+        <option value="$PROJECT_DIR$/Core/Models/WordModel.cs" />
+        <option value="$PROJECT_DIR$/Core/Mappers/OriginalWordMappers.cs" />
+        <option value="$PROJECT_DIR$/Core/Mappers/WordModelMappers.cs" />
+        <option value="$PROJECT_DIR$/DataLayer/Logic/BaseWriter.cs" />
+        <option value="$PROJECT_DIR$/Core/Services/WordService.cs" />
+        <option value="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" />
+        <option value="$PROJECT_DIR$/Api/Startup.cs" />
       </list>
     </option>
   </component>
@@ -359,6 +358,7 @@
         </serviceView>
       </list>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -373,7 +373,8 @@
       <workItem from="1581243729140" duration="1184000" />
       <workItem from="1581245514566" duration="17396000" />
       <workItem from="1581848902682" duration="2295000" />
-      <workItem from="1581852575785" duration="14578000" />
+      <workItem from="1581852575785" duration="14714000" />
+      <workItem from="1582043992518" duration="4310000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1581246505521</created>
@@ -389,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581859328974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add datebase and simple implementation for translate in blazor">
+      <created>1581870063306</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581870063306</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,86 +461,86 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1581244735245" />
-    <state width="1807" height="330" key="GridCell.Tab.0.bottom" timestamp="1581868641511">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1581870186344">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641511" />
-    <state width="1807" height="330" key="GridCell.Tab.0.center" timestamp="1581868641508">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186344" />
+    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1581870186343">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641508" />
-    <state width="1807" height="330" key="GridCell.Tab.0.left" timestamp="1581868641507">
+    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186343" />
+    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1581870186342">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641507" />
-    <state width="1807" height="330" key="GridCell.Tab.0.right" timestamp="1581868641510">
+    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186342" />
+    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1581870186343">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="330" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581868641510" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1581866669273">
+    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186343" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1581870186345">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669273" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1581866669271">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186345" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1581870186344">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669271" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1581866669271">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186344" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1581870186344">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669271" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1581866669272">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186344" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1581870186345">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669272" />
-    <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1581866669276">
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186345" />
+    <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1581870186346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669276" />
-    <state width="1807" height="344" key="GridCell.Tab.2.center" timestamp="1581866669274">
+    <state width="1807" height="344" key="GridCell.Tab.2.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186346" />
+    <state width="1807" height="344" key="GridCell.Tab.2.center" timestamp="1581870186346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669274" />
-    <state width="1807" height="344" key="GridCell.Tab.2.left" timestamp="1581866669273">
+    <state width="1807" height="344" key="GridCell.Tab.2.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186346" />
+    <state width="1807" height="344" key="GridCell.Tab.2.left" timestamp="1581870186345">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669273" />
-    <state width="1807" height="344" key="GridCell.Tab.2.right" timestamp="1581866669275">
+    <state width="1807" height="344" key="GridCell.Tab.2.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186345" />
+    <state width="1807" height="344" key="GridCell.Tab.2.right" timestamp="1581870186346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669275" />
-    <state width="1807" height="344" key="GridCell.Tab.3.bottom" timestamp="1581866669278">
+    <state width="1807" height="344" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186346" />
+    <state width="1807" height="344" key="GridCell.Tab.3.bottom" timestamp="1581870186347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669278" />
-    <state width="1807" height="344" key="GridCell.Tab.3.center" timestamp="1581866669277">
+    <state width="1807" height="344" key="GridCell.Tab.3.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186347" />
+    <state width="1807" height="344" key="GridCell.Tab.3.center" timestamp="1581870186347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669277" />
-    <state width="1807" height="344" key="GridCell.Tab.3.left" timestamp="1581866669276">
+    <state width="1807" height="344" key="GridCell.Tab.3.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186347" />
+    <state width="1807" height="344" key="GridCell.Tab.3.left" timestamp="1581870186346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669276" />
-    <state width="1807" height="344" key="GridCell.Tab.3.right" timestamp="1581866669277">
+    <state width="1807" height="344" key="GridCell.Tab.3.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186346" />
+    <state width="1807" height="344" key="GridCell.Tab.3.right" timestamp="1581870186347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.3.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669277" />
-    <state width="1807" height="344" key="GridCell.Tab.4.bottom" timestamp="1581866669280">
+    <state width="1807" height="344" key="GridCell.Tab.3.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186347" />
+    <state width="1807" height="344" key="GridCell.Tab.4.bottom" timestamp="1581870186348">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669280" />
-    <state width="1807" height="344" key="GridCell.Tab.4.center" timestamp="1581866669279">
+    <state width="1807" height="344" key="GridCell.Tab.4.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186348" />
+    <state width="1807" height="344" key="GridCell.Tab.4.center" timestamp="1581870186348">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669279" />
-    <state width="1807" height="344" key="GridCell.Tab.4.left" timestamp="1581866669278">
+    <state width="1807" height="344" key="GridCell.Tab.4.center/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186348" />
+    <state width="1807" height="344" key="GridCell.Tab.4.left" timestamp="1581870186348">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669278" />
-    <state width="1807" height="344" key="GridCell.Tab.4.right" timestamp="1581866669279">
+    <state width="1807" height="344" key="GridCell.Tab.4.left/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186348" />
+    <state width="1807" height="344" key="GridCell.Tab.4.right" timestamp="1581870186348">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.4.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581866669279" />
+    <state width="1807" height="344" key="GridCell.Tab.4.right/67.27.1853.1053@67.27.1853.1053" timestamp="1581870186348" />
     <state x="588" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size" timestamp="1581868579424">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -569,13 +577,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Api/Controllers/TranslateController.cs</url>
-          <line>14</line>
+          <line>23</line>
           <properties documentPath="$PROJECT_DIR$/Api/Controllers/TranslateController.cs" initialLine="14">
             <startOffsets>
-              <option value="377" />
+              <option value="609" />
             </startOffsets>
             <endOffsets>
-              <option value="378" />
+              <option value="610" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
