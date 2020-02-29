@@ -2,10 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Services;
+using DataLayer;
+using DataLayer.Logic.OriginalWords;
+using DataLayer.Logic.TranslateWords;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,8 +31,14 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            
-            services.Add();
+
+            services
+                .AddDbContext<FdContext>()
+                .AddScoped<IWordService, WordService>()
+                .AddScoped<IOriginalWordReader, OriginalWordReader>()
+                .AddScoped<IOriginalWordWriter, OriginalWordWriter>()
+                .AddScoped<ITranslateWordReader, TranslateWordReader>()
+                .AddScoped<ITranslateWordWriter, TranslateWordWriter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

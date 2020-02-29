@@ -7,6 +7,11 @@ namespace Core.Models
         public string Original { get; set; }
         public IList<string> Translate { get; set; }
 
+        public WordModel()
+        {
+            
+        }
+        
         public WordModel(string original, string translate)
         {
             Original = original;

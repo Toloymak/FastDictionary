@@ -28,7 +28,7 @@
         set
         {
             _source = value;
-            UpdateTranslate();
+            GetTranslate();
         }
     }
     
@@ -36,15 +36,15 @@
     public string CustomTranslate { get; set; }
     public string Result { get; set; }
     
-    public void UpdateTranslate()
+    public void GetTranslate()
     {
         if (Source.Length < 4)
             return;
 
-        var translateResponse = Task.Run(() => new TranslateGateway().Translate(Source)).Result;
+        var translateResponse = Task.Run(() => new TranslateGateway().GetTranslate(Source)).Result;
 
         if (translateResponse.IsSuccess)
-            Translate = translateResponse.Content.Translate;
+            Translate = String.Join(", " ,translateResponse.Content.Translate);
         else
             // todo: make correct error message
             Console.WriteLine("Error: " + translateResponse.Exception);
@@ -56,6 +56,12 @@
         var translate = CustomTranslate ?? Translate;
         
         Console.WriteLine($"{original} : {translate}");
-        Result = "Ok";
+        
+        var translateResponse = Task.Run(() => new TranslateGateway().Save(original, translate)).Result;
+        
+        if (translateResponse.IsSuccess)
+            Result = "Ok";
+        else
+            Result = $"Error! {translateResponse.Content}";
     }
 }

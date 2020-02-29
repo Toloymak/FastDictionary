@@ -9,7 +9,7 @@ namespace DataLayer.Logic.OriginalWords
 
     public class OriginalWordWriter : BaseWriter<OriginalWord>, IOriginalWordWriter
     {
-        public OriginalWordWriter(DbContext dbContext) : base(dbContext)
+        public OriginalWordWriter(FdContext dbContext) : base(dbContext)
         {
         }
     }

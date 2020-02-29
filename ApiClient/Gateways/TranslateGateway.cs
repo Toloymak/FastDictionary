@@ -9,7 +9,7 @@ namespace ApiClient.Gateways
 {
     public class TranslateGateway : BaseGateway
     {
-        public async Task<ApiResponse<WordModel>> Translate(string text)
+        public async Task<ApiResponse<WordModel>> GetTranslate(string text)
             => await _internalApiClient.ExecuteGet<WordModel>(
                 "translate",
                 new Dictionary<string, string>
@@ -18,5 +18,10 @@ namespace ApiClient.Gateways
                     {"from", LanguageEnum.En.ToNumberString()},
                     {"to", LanguageEnum.Ru.ToNumberString()}
                 });
+        
+        public async Task<ApiResponse<string>> Save(string original, string translate)
+            => await _internalApiClient.ExecutePost<string>(
+                "translate",
+                new WordModel(original, translate));
     }
 }

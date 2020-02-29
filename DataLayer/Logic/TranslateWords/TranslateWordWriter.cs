@@ -9,7 +9,7 @@ namespace DataLayer.Logic.TranslateWords
     
     public class TranslateWordWriter : BaseWriter<TranslateWord> , ITranslateWordWriter
     {
-        public TranslateWordWriter(DbContext dbContext) : base(dbContext)
+        public TranslateWordWriter(FdContext dbContext) : base(dbContext)
         {
         }
     }

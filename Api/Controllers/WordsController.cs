@@ -1,24 +1,25 @@
 using System.Collections.Generic;
 using Core.Models;
+using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
     public class WordsController : BaseController
     {
+        private readonly IWordService _wordService;
+        
+        public WordsController(IWordService wordService)
+        {
+            _wordService = wordService;
+        }
+        
         [HttpGet]
         public IActionResult Index()
         {
-            var wordList = new List<WordModel>()
-            {
-                new WordModel("TestOr1", "TestTr1"),
-                new WordModel("TestOr2", "TestTr2"),
-                new WordModel("TestOr3", "TestTr3"),
-                new WordModel("TestOr4", "TestTr4"),
-                new WordModel("TestOr5", "TestTr5"),
-            };
+            var wordModels = _wordService.GetAllWordModels();
 
-            return Ok(wordList);
+            return Ok(wordModels);
         }
     }
 }

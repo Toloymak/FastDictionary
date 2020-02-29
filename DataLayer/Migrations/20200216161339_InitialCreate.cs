@@ -8,7 +8,7 @@ namespace DataLayer.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "OriginalWords",
+                name: "OriginalWord",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -16,7 +16,7 @@ namespace DataLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OriginalWords", x => x.Id);
+                    table.PrimaryKey("PK_OriginalWord", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -31,9 +31,9 @@ namespace DataLayer.Migrations
                 {
                     table.PrimaryKey("PK_TranslateWord", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TranslateWord_OriginalWords_OriginalWordId",
+                        name: "FK_TranslateWord_OriginalWord_OriginalWordId",
                         column: x => x.OriginalWordId,
-                        principalTable: "OriginalWords",
+                        principalTable: "OriginalWord",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -50,8 +50,8 @@ namespace DataLayer.Migrations
                 column: "Text");
             
             migrationBuilder.CreateIndex(
-                name: "IX_OriginalWords_Text",
-                table: "OriginalWords",
+                name: "IX_OriginalWord_Text",
+                table: "OriginalWord",
                 column: "Text");
         }
 
@@ -61,7 +61,7 @@ namespace DataLayer.Migrations
                 name: "TranslateWord");
 
             migrationBuilder.DropTable(
-                name: "OriginalWords");
+                name: "OriginalWord");
         }
     }
 }

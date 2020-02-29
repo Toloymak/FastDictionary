@@ -54,7 +54,7 @@ namespace Integrations.Clients
         private const string AzureEndpoint = "https://api-nam.cognitive.microsofttranslator.com";
         
         private const string key_var = "TRANSLATOR_TEXT_SUBSCRIPTION_KEY";
-        private static readonly string subscriptionKey = "";
+        private static readonly string subscriptionKey = Environment.GetEnvironmentVariable(key_var);
 
         private const string endpoint_var = "TRANSLATOR_TEXT_ENDPOINT";
         private static readonly string endpoint = "https://api-nam.cognitive.microsofttranslator.com"; 

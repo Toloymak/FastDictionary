@@ -18,6 +18,7 @@ namespace Core.Mappers
                     {
                         Text = t
                     })
+                    .ToList()
             };
         }
     }

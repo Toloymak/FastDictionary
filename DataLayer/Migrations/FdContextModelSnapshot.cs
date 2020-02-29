@@ -22,12 +22,18 @@ namespace DataLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("LastUpdate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Priority")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Text")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("OriginalWords");
+                    b.ToTable("OriginalWord");
                 });
 
             modelBuilder.Entity("DataLayer.Models.TranslateWord", b =>

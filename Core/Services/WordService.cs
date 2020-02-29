@@ -9,7 +9,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core.Services
 {
-    public class WordService
+    public interface IWordService
+    {
+        IEnumerable<WordModel> GetAllWordModels();
+        WordModel SaveWord(WordModel wordModel, bool needSave = true);
+    }
+
+    public class WordService : IWordService
     {
         private readonly IOriginalWordReader _originalWordReader;
         private readonly IOriginalWordWriter _originalWordWriter;

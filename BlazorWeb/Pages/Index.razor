@@ -8,7 +8,7 @@
 {
     foreach (var wordModel in words)
     {
-        <div>@wordModel.Original - @wordModel.Translate</div>
+        <div>@wordModel.Original - @string.Join(", ", wordModel.Translate)</div>
     }
 }
 else

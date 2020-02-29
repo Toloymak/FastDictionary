@@ -9,10 +9,10 @@ namespace DataLayer
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             // todo: change to relation path
-            options.UseSqlite("Data Source=blogging.db");
+            options.UseSqlite("Data Source=/home/bro/Code/FastDictionary/DataLayer/FastDictionary.db");
         }
         
-        public DbSet<OriginalWord> OriginalWords { get; set; }
+        public DbSet<OriginalWord> OriginalWord { get; set; }
         public DbSet<TranslateWord> TranslateWord { get; set; }
     }
 }

@@ -31,13 +31,26 @@ namespace ApiClient
         {
             var restRequest = new RestRequest(url, Method.GET);
 
-            if (parameters != null)
-                foreach (var parameter in parameters)
-                    restRequest.Parameters.Add(new Parameter(parameter.Key, parameter.Value,
-                        ParameterType.QueryString));
+            AddParameters(restRequest, parameters, ParameterType.QueryString);
 
             var response = await Client.ExecuteAsync(restRequest);
 
+            return DeserializeResult<T>(response);
+        }
+
+        public async Task<ApiResponse<T>> ExecutePost<T>(string url, object body)
+        {
+            var restRequest = new RestRequest(url, Method.POST);
+
+            restRequest.AddJsonBody(body);
+
+            var response = await Client.ExecuteAsync(restRequest);
+
+            return DeserializeResult<T>(response);
+        }
+        
+        private static ApiResponse<T> DeserializeResult<T>(IRestResponse response)
+        {
             try
             {
                 var resultContent = JsonConvert.DeserializeObject<T>(response.Content);
@@ -47,6 +60,15 @@ namespace ApiClient
             {
                 return new ApiResponse<T>(e);
             }
+        }
+
+        private static void AddParameters(RestRequest restRequest,
+            Dictionary<string, string> parameters,
+            ParameterType type)
+        {
+            if (parameters != null)
+                foreach (var parameter in parameters)
+                    restRequest.Parameters.Add(new Parameter(parameter.Key, parameter.Value, type));
         }
     }
 }

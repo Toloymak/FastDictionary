@@ -9,6 +9,6 @@ namespace DataLayer.Models
         public DateTime LastUpdate { get; set; }
         public int Priority { get; set; }
         
-        public IEnumerable<TranslateWord> TranslateWords { get; set; }
+        public ICollection<TranslateWord> TranslateWords { get; set; }
     }
 }

@@ -12,9 +12,9 @@ namespace Api.Controllers
 {
     public class TranslateController: BaseController
     {
-        private readonly WordService _wordService;
+        private readonly IWordService _wordService;
 
-        public TranslateController(WordService wordService)
+        public TranslateController(IWordService wordService)
         {
             _wordService = wordService;
         }
@@ -34,12 +34,10 @@ namespace Api.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Post(string source, string translate)
+        public async Task<IActionResult> Post([FromBody] WordModel wordModel)
         {
-            
-            
+            _wordService.SaveWord(wordModel);
             return Ok();
         }
-        
     }
 }

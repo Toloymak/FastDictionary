@@ -1,2 +1,4 @@
 # Editor-based HTTP Client requests
 /.idea.FastDictionary/.idea/httpRequests/
+# Datasource local storage ignored files
+/.idea.FastDictionary/.idea/dataSources/
