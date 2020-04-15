@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using ApiLogic.Entities.Words;
+using Clients.EntitiClients;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
@@ -6,10 +10,19 @@ namespace Web.Controllers
     [Route("[controller]")]
     public class WordsController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IWorldsClient _worldsClient;
+        
+        public WordsController(IWorldsClient worldsClient)
         {
-            return Ok("Ok");
+            _worldsClient = worldsClient;
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var worlds = await _worldsClient.Get() ?? new List<GetWordDto>();
+
+            return Ok(worlds);
         }
     }
 }
